@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمين سعد | Amin Saad - أسئلة شائعة عن الهكر الأخلاقي</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1061/1061175.png">
+    
+    <meta name="description" content="أسئلة شائعة عن أفضل هكر أخلاقي في مصر أمين سعد، وعن مجال الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، وأدوات الاختراق.">
+    <meta name="keywords" content="أسئلة شائعة, FAQ, أفضل هكر في مصر, أفضل هكر في سوهاج, أمين سعد, Amin Saad, الهكر الأخلاقي, الأمن السيبراني, اختبار الاختراق, أدوات الاختراق, تعلم الهكر, سؤال وجواب, hacking FAQ, cybersecurity FAQ, penetration testing FAQ, ethical hacking questions">
+    <meta name="author" content="Amin Saad - AminVZD">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://amin772025.github.io/faq.html">
+
+    <meta property="og:title" content="أمين سعد | أسئلة شائعة عن الهكر الأخلاقي">
+    <meta property="og:description" content="إجابات على أكثر الأسئلة شيوعاً عن أفضل هكر أخلاقي في مصر وعن مجال الأمن السيبراني">
+    <meta property="og:url" content="https://amin772025.github.io/faq.html">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&display=swap');
+        * { font-family: 'Cairo', sans-serif; }
+        body { background: linear-gradient(135deg, #0a0f1a 0%, #0c1322 100%); }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-text { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
+        .telegram-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #0088cc, #006699);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,136,204,0.4);
+        }
+        .telegram-float:hover { transform: scale(1.1); }
+        .nav-links a { transition: all 0.3s ease; }
+        .nav-links a:hover { color: #10b981; }
+        
+        /* FAQ بالضغط */
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        .faq-question:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 1rem;
+        }
+        .faq-answer.show {
+            max-height: 300px;
+            padding: 0 1rem 1rem 1rem;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="text-gray-200 relative z-10">
+
+    <a href="https://t.me/A_VZD" target="_blank" class="telegram-float">
+        <i class="fab fa-telegram-plane text-white text-2xl"></i>
+    </a>
+
+    <div class="bg-black/40 backdrop-blur-sm border-b border-emerald-500/20 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex flex-wrap justify-center gap-6 nav-links">
+                <a href="index.html" class="text-gray-300 hover:text-emerald-400 transition">الرئيسية</a>
+                <a href="projects.html" class="text-gray-300 hover:text-emerald-400 transition">مشاريعي</a>
+                <a href="faq.html" class="text-emerald-400 font-bold border-b-2 border-emerald-400 pb-1">أسئلة شائعة</a>
+                <a href="about.html" class="text-gray-300 hover:text-emerald-400 transition">من أنا</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 py-16 text-center relative z-10">
+        <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center border-2 border-emerald-400/40 mx-auto mb-6">
+            <i class="fa-regular fa-circle-question text-5xl text-emerald-400"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-3">
+            <span class="text-white">أسئلة شائعة</span>
+            <span class="text-emerald-400 glow-text"> | FAQ</span>
+        </h1>
+        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ اضغط على أي سؤال لظهور الإجابة ⚡</p>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">أجوبة على أكثر الأسئلة شيوعاً عن أفضل هكر أخلاقي في مصر وعن مجال الأمن السيبراني</p>
+    </div>
+
+    <div class="container mx-auto px-6 py-10 max-w-4xl">
+        
+        <!-- سؤال 1 - عن أمين سعد -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ من هو أمين سعد؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">أمين سعد (Amin Saad - <span class="text-emerald-300">AminVZD</span>) هو أفضل هكر أخلاقي في مصر وسوهاج، شاب مصري طموح من محافظة سوهاج، قرية أبيدوس، يعمل في مجال الهكر الأخلاقي، الأمن السيبراني، تطوير التطبيقات، وبرمجة الألعاب.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 2 - المشاريع -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هي مشاريع أمين سعد المميزة؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">أهم مشاريعي: Hacker School (تطبيق تعليم الأمن السيبراني)، Hemo Glow (تطبيق طبي ذكي)، RONY BOT (بوت أتمتة)، Amin Zero-Day (هندسة تطبيقات أندرويد)، ومكتبة من إسكربتات Python و Node.js.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 3 - التواصل -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ كيف أتواصل مع أمين سعد؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">يمكنك التواصل معي عبر تيليجرام: t.me/A_VZD، أو عبر الإنستجرام: amin_vzd، أو من خلال حساب GitHub الخاص بي: amin772025.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 4 - أين يعيش -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ أين يعيش أمين سعد؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">أنا من مصر – محافظة سوهاج – مركز البلينا – قرية أبيدوس. هذه المنطقة الأثرية العريقة التي تضم معبد أبيدوس الشهير.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 5 - مجالاته -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هي مجالات أمين سعد؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">أعمل في عدة مجالات: الهكر الأخلاقي واختبار الاختراق، الأمن السيبراني، تطوير تطبيقات الموبايل، برمجة الألعاب، وجمع المعلومات OSINT، بالإضافة إلى أتمتة المهام باستخدام Python.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 6 - AminVZD -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هو AminVZD؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">AminVZD هو الاسم الفني والعلامة الشخصية لي (أمين سعد) في عالم الأمن السيبراني والتطوير. يعبر عن هويتي الرقمية كمحتوى، مشاريع، وأدوات أنشرها تحت هذا الاسم.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 7 - الأهداف المستقبلية -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هي أهداف أمين سعد المستقبلية؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">أهدف لأن أصبح خبير أمن سيبراني معتمد، أساهم في حماية الأنظمة والبيانات، وأطور أدواتي الخاصة في الاختراق الأخلاقي، وأواصل التعلم والتجربة لتحقيق التميز تحت علامة AminVZD.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 8 - أفضل لغة برمجة -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هي أفضل لغة برمجة للهكر الأخلاقي؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">Python تعتبر الأفضل للهكر الأخلاقي لسهولتها وقوة مكتباتها المتخصصة مثل Scapy و Requests. يليها Bash لأنظمة Linux، ثم JavaScript لاختبار اختراق الويب.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 9 - كيف تصبح هكر أخلاقي -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ كيف تصبح هكر أخلاقي من الصفر؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">ابدأ بتعلم أساسيات الشبكات وأنظمة Linux، ثم تعلم لغة Python، بعدها ادرس أدوات الاختراق مثل Nmap و Burp Suite، واختبر في بيئات قانونية مثل Hack The Box، ولا تنسَ شهادات مثل CEH أو eJPT.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 10 - الفرق بين الأخلاقي والضار -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هو الفرق بين الهكر الأخلاقي والهاكر الضار؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">الهكر الأخلاقي (Ethical Hacker) يعمل بإذن قانوني وهدف حماية الأنظمة، بينما الهاكر الضار (Black Hat) يخترق بغرض التدمير أو السرقة أو الابتزاز دون إذن.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 11 - كم يستغرق التعلم -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ كم يستغرق تعلم الهكر الأخلاقي؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">يختلف حسب الجهد والاستمرارية. بمعدل 10-15 ساعة أسبوعياً، يمكنك إتقان الأساسيات في 6-12 شهراً. الاحتراف قد يأخذ من سنة إلى سنتين من الممارسة المستمرة.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 12 - أهم أدوات الاختراق -->
+        <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl border border-gray-700 mb-4 overflow-hidden">
+            <div class="faq-question p-5 flex justify-between items-center" onclick="toggleFAQ(this)">
+                <h3 class="text-lg font-bold text-emerald-400">❓ ما هي أهم أدوات الاختراق؟</h3>
+                <i class="fas fa-chevron-down faq-icon text-emerald-400"></i>
+            </div>
+            <div class="faq-answer">
+                <p class="text-gray-300 leading-relaxed">من أهم الأدوات: Nmap (مسح المنافذ)، Burp Suite (اختبار الويب)، Metasploit (استغلال الثغرات)، Wireshark (تحليل الشبكة)، John the Ripper (تكسير كلمات المرور)، وكلها متوفرة في توزيعة Kali Linux.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="index.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 transition px-8 py-3 rounded-full font-bold shadow-lg">← العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const parent = element.parentElement;
+            const answer = parent.querySelector('.faq-answer');
+            const isActive = answer.classList.contains('show');
+            
+            // Close all other answers (optional, makes it like accordion)
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                if (ans !== answer) {
+                    ans.classList.remove('show');
+                    ans.parentElement.querySelector('.faq-question').classList.remove('active');
+                }
+            });
+            
+            // Toggle current
+            answer.classList.toggle('show');
+            element.classList.toggle('active');
+        }
+    </script>
+
+    <footer class="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
+        <p>جميع الحقوق محفوحة © 2026 | Amin Saad (AminVZD) | أفضل هكر أخلاقي في مصر وسوهاج</p>
+    </footer>
+
+</body>
+</html>
