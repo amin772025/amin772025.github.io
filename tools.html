@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمين سعد | أدوات اختبار الاختراق - دليل شامل</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1061/1061175.png">
+    
+    <meta name="description" content="دليل شامل لأدوات اختبار الاختراق والأمن السيبراني: Nmap, Burp Suite, Metasploit, Wireshark, John the Ripper, Hydra, وشرح استخداماتها في الهكر الأخلاقي.">
+    <meta name="keywords" content="أدوات الاختراق, Nmap, Burp Suite, Metasploit, Wireshark, John the Ripper, Hydra, أمن سيبراني, اختبار اختراق, أدوات الهاكر, أول هكر في مصر, أول هكر في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, Ethical Hacking Tools, Penetration Testing Tools, Cybersecurity Tools, Nmap tutorial, Burp Suite tutorial, Metasploit tutorial, Wireshark tutorial, John the Ripper tutorial, Hydra tutorial, hacking tools Egypt, cybersecurity tools Egypt, Kali Linux tools, penetration testing tools list, best hacking tools, top cybersecurity tools, network scanning tools, vulnerability assessment tools, exploitation tools, password cracking tools, sniffing tools, Kali Linux, Termux tools, ethical hacking tools for beginners">
+    <meta name="author" content="Amin Saad - AminVZD">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://amin772025.github.io/tools.html">
+
+    <meta property="og:title" content="أمين سعد | دليل أدوات اختبار الاختراق">
+    <meta property="og:description" content="دليل شامل لأدوات الأمن السيبراني والهكر الأخلاقي مع شرح الاستخدامات والأوامر الأساسية.">
+    <meta property="og:url" content="https://amin772025.github.io/tools.html">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&display=swap');
+        * { font-family: 'Cairo', sans-serif; }
+        body { background: linear-gradient(135deg, #0a0f1a 0%, #0c1322 100%); }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-text { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
+        .card-hover { transition: all 0.3s ease; border: 1px solid rgba(16,185,129,0.15); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.3); }
+        .telegram-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #0088cc, #006699);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,136,204,0.4);
+        }
+        .telegram-float:hover { transform: scale(1.1); }
+        .nav-links a { transition: all 0.3s ease; }
+        .nav-links a:hover { color: #10b981; transform: translateY(-2px); }
+        .section-title { border-right: 4px solid #10b981; padding-right: 12px; }
+        .tool-category { 
+            background: rgba(16, 185, 129, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
+        .tool-command {
+            background: #0a0f1a;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #10b981;
+            font-size: 13px;
+            border: 1px solid rgba(16,185,129,0.2);
+        }
+        .badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body class="text-gray-200 relative z-10">
+
+    <a href="https://t.me/A_VZD" target="_blank" class="telegram-float">
+        <i class="fab fa-telegram-plane text-white text-2xl"></i>
+    </a>
+
+    <!-- شريط التنقل -->
+    <div class="bg-black/40 backdrop-blur-sm border-b border-emerald-500/20 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex flex-wrap justify-center gap-6 nav-links">
+                <a href="index.html" class="text-gray-300 hover:text-emerald-400 transition">الرئيسية</a>
+                <a href="projects.html" class="text-gray-300 hover:text-emerald-400 transition">مشاريعي</a>
+                <a href="tools.html" class="text-emerald-400 font-bold border-b-2 border-emerald-400 pb-1">الأدوات</a>
+                <a href="languages.html" class="text-gray-300 hover:text-emerald-400 transition">لغات البرمجة</a>
+                <a href="articles.html" class="text-gray-300 hover:text-emerald-400 transition">مقالات</a>
+                <a href="faq.html" class="text-gray-300 hover:text-emerald-400 transition">أسئلة</a>
+                <a href="about.html" class="text-gray-300 hover:text-emerald-400 transition">من أنا</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- العنوان الرئيسي -->
+    <div class="container mx-auto px-6 py-16 text-center relative z-10">
+        <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center border-2 border-emerald-400/40 mx-auto mb-6">
+            <i class="fa-solid fa-toolbox text-5xl text-emerald-400"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-3">
+            <span class="text-white">أدوات اختبار الاختراق</span>
+            <span class="text-emerald-400 glow-text"> | Hacking Tools</span>
+        </h1>
+        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ دليل شامل لأدوات الأمن السيبراني والهكر الأخلاقي ⚡</p>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">تعرف على أشهر أدوات اختبار الاختراق مع شرح الاستخدامات والأوامر الأساسية</p>
+    </div>
+
+    <div class="container mx-auto px-6 py-10 max-w-6xl">
+
+        <!-- القسم 1: أدوات مسح الشبكات -->
+        <h2 class="text-3xl font-bold mb-6 section-title">🌐 أدوات مسح الشبكات واكتشاف الثغرات</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Nmap -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-network-wired text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🔍 Nmap</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة مسح الشبكات واكتشاف المنافذ المفتوحة والأجهزة المتصلة بالشبكة. تعتبر من أهم أدوات أي هكر أخلاقي.</p>
+                <div class="tool-command mb-2">nmap -sV -sC 192.168.1.1</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">مسح المنافذ</span>
+                    <span class="badge">اكتشاف الخدمات</span>
+                    <span class="badge">تحديد نظام التشغيل</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم Nmap في المرحلة الأولى من اختبار الاختراق (جمع المعلومات) لمعرفة الأجهزة والخدمات المشغلة.</p>
+            </div>
+
+            <!-- Zenmap -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-sitemap text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🗺️ Zenmap</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">الواجهة الرسومية لـ Nmap، تسهل عملية مسح الشبكات وتحليل النتائج للمبتدئين.</p>
+                <div class="tool-command mb-2">zenmap (واجهة رسومية)</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">واجهة رسومية</span>
+                    <span class="badge">تسهيل المسح</span>
+                    <span class="badge">عرض النتائج</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> مناسبة للمبتدئين أو عند الحاجة لعرض النتائج بشكل مرئي.</p>
+            </div>
+
+            <!-- Masscan -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-bolt text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">⚡ Masscan</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة مسح سريعة جداً، مصممة لفحص الإنترنت بالكامل في وقت قياسي.</p>
+                <div class="tool-command mb-2">masscan -p80,443 192.168.1.0/24</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">مسح سريع</span>
+                    <span class="badge">إنترنت كامل</span>
+                    <span class="badge">متعدد الخيوط</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم عند الحاجة لمسح نطاق واسع من العناوين في وقت قصير.</p>
+            </div>
+        </div>
+
+        <!-- القسم 2: أدوات تحليل الشبكات -->
+        <h2 class="text-3xl font-bold mb-6 section-title">📡 أدوات تحليل الشبكات والتنصت</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Wireshark -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-wifi text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">📡 Wireshark</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة تحليل حزم الشبكة (Packet Analyzer) لفهم حركة البيانات وتحليل البروتوكولات.</p>
+                <div class="tool-command mb-2">wireshark (واجهة رسومية)</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">تحليل حزم</span>
+                    <span class="badge">بروتوكولات</span>
+                    <span class="badge">تنصت</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لتحليل حركة الشبكة واكتشاف الهجمات مثل MITM.</p>
+            </div>
+
+            <!-- Tcpdump -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-terminal text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">📟 Tcpdump</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة سطر أوامر لالتقاط حزم الشبكة وتحليلها في بيئات Linux.</p>
+                <div class="tool-command mb-2">tcpdump -i eth0 -n</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">سطر أوامر</span>
+                    <span class="badge">خفيف</span>
+                    <span class="badge">تحليل سريع</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم في السيرفرات والبيئات التي لا تحتوي على واجهة رسومية.</p>
+            </div>
+
+            <!-- Aircrack-ng -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-lock text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🔓 Aircrack-ng</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">مجموعة أدوات لاختبار أمان الشبكات اللاسلكية (Wi-Fi) وكسر تشفيرها.</p>
+                <div class="tool-command mb-2">aircrack-ng -b 00:11:22:33:44:55 capture.cap</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">شبكات Wi-Fi</span>
+                    <span class="badge">كسر تشفير</span>
+                    <span class="badge">WEP/WPA</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاختبار أمان الشبكات اللاسلكية واكتشاف نقاط الضعف.</p>
+            </div>
+        </div>
+
+        <!-- القسم 3: أدوات استغلال الثغرات -->
+        <h2 class="text-3xl font-bold mb-6 section-title">💣 أدوات استغلال الثغرات</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Metasploit -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-skull text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">💣 Metasploit</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">إطار عمل لتطوير واستغلال الثغرات الأمنية في الأنظمة، يعتبر من أقوى أدوات الاختراق.</p>
+                <div class="tool-command mb-2">msfconsole → use exploit/windows/smb/ms17_010_eternalblue</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">استغلال الثغرات</span>
+                    <span class="badge">Post-exploitation</span>
+                    <span class="badge">Payloads</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم في اختبار اختراق الأنظمة واستغلال الثغرات المعروفة بشكل قانوني.</p>
+            </div>
+
+            <!-- Burp Suite -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-bug text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🎯 Burp Suite</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة اختبار اختراق تطبيقات الويب، تشمل اعتراض الطلبات وتحليلها واكتشاف الثغرات.</p>
+                <div class="tool-command mb-2">Burp Suite (واجهة رسومية)</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">تطبيقات الويب</span>
+                    <span class="badge">اعتراض طلبات</span>
+                    <span class="badge">SQLi, XSS</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاكتشاف ثغرات تطبيقات الويب مثل SQL Injection و XSS.</p>
+            </div>
+
+            <!-- SQLmap -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-database text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🗄️ SQLmap</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة أتمتة لاكتشاف واستغلال ثغرات SQL Injection في تطبيقات الويب.</p>
+                <div class="tool-command mb-2">sqlmap -u "http://example.com/page?id=1" --dbs</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">SQLi</span>
+                    <span class="badge">قواعد بيانات</span>
+                    <span class="badge">أتمتة</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاكتشاف واستغلال ثغرات SQL Injection بشكل آلي.</p>
+            </div>
+        </div>
+
+        <!-- القسم 4: أدوات كسر كلمات المرور -->
+        <h2 class="text-3xl font-bold mb-6 section-title">🔑 أدوات كسر كلمات المرور والتشفير</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- John the Ripper -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-key text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🔑 John the Ripper</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة تكسير كلمات المرور باستخدام هجمات القاموس والقوة العمياء والهجينة.</p>
+                <div class="tool-command mb-2">john --wordlist=passwords.txt hash.txt</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">كسر كلمات المرور</span>
+                    <span class="badge">قاموس</span>
+                    <span class="badge">Brute Force</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاختبار قوة كلمات المرور واستردادها في بيئات قانونية.</p>
+            </div>
+
+            <!-- Hashcat -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-microchip text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">⚡ Hashcat</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أسرع أداة لكسر التشفير باستخدام قدرات معالجة الرسوميات (GPU) ومعالجات متعددة.</p>
+                <div class="tool-command mb-2">hashcat -m 0 -a 0 hash.txt wordlist.txt</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">GPU</span>
+                    <span class="badge">أسرع أداة</span>
+                    <span class="badge">تشفير متعدد</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم في مختبرات اختبار الاختراق لاختبار قوة خوارزميات التشفير.</p>
+            </div>
+
+            <!-- Hydra -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-fingerprint text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🐉 Hydra</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة شن هجمات تخمين كلمات المرور على بروتوكولات متعددة (SSH, FTP, HTTP, MySQL).</p>
+                <div class="tool-command mb-2">hydra -l admin -P pass.txt ssh://192.168.1.1</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">هجمات تخمين</span>
+                    <span class="badge">بروتوكولات</span>
+                    <span class="badge">متعدد</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاختبار قوة المصادقة على الخدمات المختلفة.</p>
+            </div>
+        </div>
+
+        <!-- القسم 5: أدوات جمع المعلومات OSINT -->
+        <h2 class="text-3xl font-bold mb-6 section-title">🔍 أدوات جمع المعلومات (OSINT)</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Maltego -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-sitemap text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🕸️ Maltego</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة قوية لتحليل العلاقات وجمع المعلومات من مصادر مفتوحة (OSINT) بتمثيل بياني.</p>
+                <div class="tool-command mb-2">Maltego (واجهة رسومية)</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">OSINT</span>
+                    <span class="badge">تحليل علاقات</span>
+                    <span class="badge">تصور بياني</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم في جمع المعلومات عن الأفراد والشركات من مصادر مفتوحة.</p>
+            </div>
+
+            <!-- theHarvester -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-envelope text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">📧 theHarvester</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">أداة لجمع عناوين البريد الإلكتروني و أسماء النطاقات و معلومات من محركات البحث.</p>
+                <div class="tool-command mb-2">theHarvester -d example.com -b google</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">بريد إلكتروني</span>
+                    <span class="badge">محركات بحث</span>
+                    <span class="badge">نطاقات</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم في مرحلة جمع المعلومات عن الأهداف.</p>
+            </div>
+
+            <!-- Shodan -->
+            <div class="bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-solid fa-globe text-emerald-400 text-3xl"></i>
+                    <h3 class="text-xl font-bold">🌍 Shodan</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-3">محرك بحث للأجهزة المتصلة بالإنترنت، يكشف عن الأجهزة والخدمات المكشوفة.</p>
+                <div class="tool-command mb-2">shodan search "port:22"</div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="badge">محرك بحث</span>
+                    <span class="badge">أجهزة إنترنت</span>
+                    <span class="badge">خدمات مكشوفة</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3"><span class="text-emerald-400">الاستخدام:</span> تستخدم لاستكشاف الأجهزة المتصلة بالإنترنت واكتشاف الخدمات المكشوفة.</p>
+            </div>
+        </div>
+
+        <!-- زر العودة للرئيسية -->
+        <div class="text-center mt-8">
+            <a href="index.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 transition px-8 py-3 rounded-full font-bold shadow-lg">← العودة للرئيسية</a>
+        </div>
+
+    </div>
+
+    <footer class="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
+        <p>جميع الحقوق محفوحة © 2026 | Amin Saad (AminVZD) | دليل أدوات اختبار الاختراق</p>
+    </footer>
+
+</body>
+</html>
