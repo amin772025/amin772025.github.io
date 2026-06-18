@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمين سعد | مقالات في الأمن السيبراني والهكر الأخلاقي</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1061/1061175.png">
+    
+    <meta name="description" content="مجموعة مقالات تعليمية في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، أدوات الاختراق، ولغات البرمجة من أمين سعد.">
+    <meta name="keywords" content="مقالات أمن سيبراني, مقالات هكر, تعلم الاختراق, اختبار اختراق, Nmap, Python, أمن المعلومات, أول هكر في مصر, أول هكر في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, Cybersecurity Articles, Hacking Tutorials, Penetration Testing Guide, Ethical Hacking Articles, Learn Cybersecurity, Hacking Guides, Security Research, Infosec Articles, Cyber Security Blog, Hacking Blog, Security Tutorials, Hacking for Beginners, Cyber Security Guide, Ethical Hacking Course, Hacking Tools Tutorial, Network Security, Web Security, Application Security, Mobile Security, Cloud Security, IoT Security, Cyber Security News, Security Analysis, Threat Intelligence, Vulnerability Research, Exploit Development, Reverse Engineering, Malware Analysis, Digital Forensics, Security Operations, Incident Response, Security Awareness, Cyber Defense, Cyber Attack, Security Best Practices, Security Frameworks, OWASP, NIST, CIS Controls, Zero Trust, DevSecOps, Security Automation, AI in Cybersecurity, Machine Learning Security, Blockchain Security, Cryptography, Network Security, Wireless Security, Web Application Security, API Security, Container Security, Kubernetes Security, Serverless Security, DevSecOps, Security Tools, Security Auditing, Compliance, Risk Management, Security Governance, Security Strategy, Security Training, Security Certifications, Security Career, Security Jobs, Security Trends, Security Future, Cybersecurity Egypt, Ethical Hacking Egypt, Penetration Testing Egypt, Security Research Egypt, Cyber Security Blog Egypt, Hacking Blog Egypt">
+    <meta name="author" content="Amin Saad - AminVZD">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://amin772025.github.io/articles.html">
+
+    <meta property="og:title" content="أمين سعد | مقالات الأمن السيبراني">
+    <meta property="og:description" content="مجموعة مقالات تعليمية في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، وأدوات الاختراق">
+    <meta property="og:url" content="https://amin772025.github.io/articles.html">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&display=swap');
+        * { font-family: 'Cairo', sans-serif; }
+        body { background: linear-gradient(135deg, #0a0f1a 0%, #0c1322 100%); }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-text { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
+        .card-hover { transition: all 0.3s ease; border: 1px solid rgba(16,185,129,0.15); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.3); }
+        .telegram-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #0088cc, #006699);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,136,204,0.4);
+        }
+        .telegram-float:hover { transform: scale(1.1); }
+        .nav-links a { transition: all 0.3s ease; }
+        .nav-links a:hover { color: #10b981; transform: translateY(-2px); }
+        .section-title { border-right: 4px solid #10b981; padding-right: 12px; }
+        .article-card { transition: all 0.3s ease; }
+        .article-card:hover { background: rgba(16,185,129,0.05); border-color: #10b981; }
+        .badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+        }
+        .read-more {
+            color: #10b981;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .read-more:hover {
+            color: #34d399;
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body class="text-gray-200 relative z-10">
+
+    <a href="https://t.me/A_VZD" target="_blank" class="telegram-float">
+        <i class="fab fa-telegram-plane text-white text-2xl"></i>
+    </a>
+
+    <div class="bg-black/40 backdrop-blur-sm border-b border-emerald-500/20 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex flex-wrap justify-center gap-6 nav-links">
+                <a href="index.html" class="text-gray-300 hover:text-emerald-400 transition">الرئيسية</a>
+                <a href="projects.html" class="text-gray-300 hover:text-emerald-400 transition">مشاريعي</a>
+                <a href="tools.html" class="text-gray-300 hover:text-emerald-400 transition">الأدوات</a>
+                <a href="languages.html" class="text-gray-300 hover:text-emerald-400 transition">لغات البرمجة</a>
+                <a href="articles.html" class="text-emerald-400 font-bold border-b-2 border-emerald-400 pb-1">مقالات</a>
+                <a href="faq.html" class="text-gray-300 hover:text-emerald-400 transition">أسئلة</a>
+                <a href="about.html" class="text-gray-300 hover:text-emerald-400 transition">من أنا</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 py-16 text-center relative z-10">
+        <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center border-2 border-emerald-400/40 mx-auto mb-6">
+            <i class="fa-solid fa-newspaper text-5xl text-emerald-400"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-3">
+            <span class="text-white">مقالات الأمن السيبراني</span>
+            <span class="text-emerald-400 glow-text"> | Articles</span>
+        </h1>
+        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ مقالات تعليمية في الهكر الأخلاقي والأمن السيبراني ⚡</p>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">مجموعة من المقالات الشاملة لمساعدتك في فهم أساسيات الأمن السيبراني واختبار الاختراق</p>
+    </div>
+
+    <div class="container mx-auto px-6 py-10 max-w-5xl">
+
+        <!-- المقال 1 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">مقدمة</span>
+                <span class="badge">أمن سيبراني</span>
+                <span class="badge">مبتدئين</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🔰 مقدمة في الأمن السيبراني للمبتدئين</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                الأمن السيبراني هو حماية الأنظمة والشبكات والبيانات من الهجمات الرقمية. يشمل مجالات متعددة مثل أمن الشبكات، أمن التطبيقات، وأمن المعلومات. 
+                في هذا المقال، نتعرف على المفاهيم الأساسية: ما هو الأمن السيبراني؟ ما هي أنواع التهديدات؟ ما هي أفضل الممارسات للحماية؟ 
+                نغطي أيضاً الفرق بين الهكر الأخلاقي والهاكر الضار، وأهمية الوعي الأمني في العصر الرقمي. المقال موجه للمبتدئين الذين يرغبون في فهم أساسيات الأمن السيبراني وبدء رحلتهم في هذا المجال.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 2 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">اختبار اختراق</span>
+                <span class="badge">Penetration Testing</span>
+                <span class="badge">خطوات</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🛡️ كيف تبدأ في اختبار الاختراق (Penetration Testing)؟</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                اختبار الاختراق هو عملية محاكاة هجمات سيبرانية على نظام لاكتشاف الثغرات قبل أن يستغلها المهاجمون. 
+                في هذا المقال الشامل، نتعرف على الخطوات الأساسية لاختبار الاختراق: 
+                1. جمع المعلومات (Reconnaissance) - كيفية جمع البيانات عن الهدف.
+                2. المسح (Scanning) - استخدام أدوات مثل Nmap لاكتشاف المنافذ والخدمات.
+                3. استغلال الثغرات (Exploitation) - كيفية استغلال الثغرات باستخدام Metasploit.
+                4. الحفاظ على الوصول (Maintaining Access) - إدارة الجلسات.
+                5. تقديم التقارير (Reporting) - كتابة تقرير احترافي عن الثغرات المكتشفة.
+                المقال يشرح أيضاً الأدوات الأساسية وأفضل الممارسات في اختبار الاختراق الأخلاقي.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 3 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">Nmap</span>
+                <span class="badge">مسح الشبكات</span>
+                <span class="badge">أدوات</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🌐 شرح أداة Nmap بالعربي - دليل شامل</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Nmap (Network Mapper) هي أداة مفتوحة المصدر لاستكشاف الشبكات وأمنها، تعتبر من أهم أدوات أي هكر أخلاقي.
+                في هذا المقال، نتعلم:
+                - كيفية تثبيت Nmap على Kali Linux و Windows.
+                - الأوامر الأساسية: مسح المنافذ (Port Scanning)، اكتشاف الخدمات (Service Detection)، تحديد نظام التشغيل (OS Detection).
+                - أمثلة عملية: `nmap -sV -sC 192.168.1.1`، `nmap -p 80,443 192.168.1.0/24`.
+                - استخدام Nmap Scripting Engine (NSE) لاكتشاف الثغرات.
+                - تحليل النتائج وتفسيرها.
+                المقال يقدم شرحاً وافياً لكل أمر مع أمثلة واقعية، مناسب للمبتدئين والمحترفين.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 4 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">Python</span>
+                <span class="badge">أتمتة</span>
+                <span class="badge">أدوات</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🐍 كتابة أدوات الاختراق باستخدام Python</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Python هي اللغة الأكثر استخداماً في مجال الأمن السيبراني لكتابة أدوات الاختراق والأتمتة.
+                في هذا المقال، نتعلم:
+                - أساسيات Python للأمن السيبراني.
+                - كيفية كتابة سكربت لمسح المنافذ باستخدام مكتبة Socket.
+                - استخدام مكتبة Requests لإرسال طلبات HTTP وتحليل الاستجابات.
+                - كتابة أداة OSINT لجمع المعلومات من APIs.
+                - تطوير سكربت لاستغلال ثغرة SQL Injection باستخدام SQLmap API.
+                - أمثلة عملية لسكربتات Web Scraping وتحليل البيانات.
+                المقال يقدم شروحات وأكواد عملية يمكنك تجربتها مباشرة.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 5 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">OSINT</span>
+                <span class="badge">جمع معلومات</span>
+                <span class="badge">استطلاع</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🔍 دليل جمع المعلومات مفتوحة المصدر (OSINT)</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                OSINT (Open Source Intelligence) هو عملية جمع وتحليل المعلومات من مصادر مفتوحة ومتاحة للعموم.
+                في هذا المقال الشامل، نتعرف على:
+                - ما هو OSINT ولماذا هو مهم في اختبار الاختراق؟
+                - أدوات OSINT الشهيرة: Maltego، theHarvester، Shodan، Recon-ng.
+                - كيفية جمع المعلومات عن الأفراد والشركات والنطاقات.
+                - استخدام محركات البحث المتقدمة (Google Dorks) لجمع المعلومات.
+                - تحليل البيانات واستخلاص المعلومات القيمة.
+                - أمثلة عملية على جمع المعلومات باستخدام أدوات OSINT المختلفة.
+                المقال يشرح تقنيات متقدمة لجمع المعلومات بشكل قانوني وأخلاقي.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 6 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">Metasploit</span>
+                <span class="badge">استغلال</span>
+                <span class="badge">ثغرات</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">💣 شرح إطار عمل Metasploit للمبتدئين</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Metasploit هو إطار عمل قوي لتطوير واستغلال الثغرات الأمنية، يعتبر من أهم أدوات اختبار الاختراق.
+                في هذا المقال، نتعلم:
+                - ما هو Metasploit وما هي مكوناته الأساسية؟
+                - كيفية تشغيل Metasploit في Kali Linux.
+                - هيكل Metasploit: Exploits، Payloads، Auxiliary modules، Encoders.
+                - كيفية البحث عن ثغرة واستغلالها: `search`، `use`، `set RHOSTS`، `run`.
+                - مثال عملي: استغلال ثغرة MS17-010 (EternalBlue) في نظام Windows.
+                - استخدام Meterpreter للحفاظ على الوصول وجمع المعلومات.
+                - كتابة سكربتات Metasploit بلغة Ruby.
+                المقال يوفر دليلاً عملياً خطوة بخطوة لاستخدام Metasploit في اختبار الاختراق الأخلاقي.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 7 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">Wi-Fi</span>
+                <span class="badge">شبكات لاسلكية</span>
+                <span class="badge">اختراق</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">📶 اختبار أمان الشبكات اللاسلكية (Wi-Fi) باستخدام Aircrack-ng</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                أمن الشبكات اللاسلكية هو جزء مهم من الأمن السيبراني. Aircrack-ng هي مجموعة أدوات لاختبار أمان Wi-Fi.
+                في هذا المقال، نتعلم:
+                - تثبيت Aircrack-ng على Kali Linux.
+                - وضع بطاقة الشبكة في وضع المراقبة (Monitor Mode).
+                - اكتشاف الشبكات اللاسلكية: `airodump-ng`.
+                - التقاط حزم الـ Handshake.
+                - كسر تشفير WEP و WPA/WPA2.
+                - استخدام هجمات القاموس وكسر التشفير.
+                - حماية الشبكات اللاسلكية من الهجمات.
+                المقال يقدم دليلاً عملياً لاختبار أمان شبكات Wi-Fi في بيئات قانونية.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <!-- المقال 8 -->
+        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+                <span class="badge">أخلاقيات</span>
+                <span class="badge">قانون</span>
+                <span class="badge">الهكر الأخلاقي</span>
+            </div>
+            <h2 class="text-2xl font-bold text-emerald-400 mb-3">⚖️ أخلاقيات وقانون الهكر الأخلاقي</h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                الهكر الأخلاقي هو ممارسة اختبار الاختراق بإذن قانوني وهدف حماية الأنظمة. في هذا المقال، نتعرف على:
+                - الفرق بين الهكر الأخلاقي والهاكر غير الأخلاقي.
+                - القوانين المتعلقة باختبار الاختراق في مصر والعالم.
+                - اتفاقيات عدم الإفصاح (NDA) والإذن القانوني (Authorization).
+                - أخلاقيات الهكر الأخلاقي: الصدق، النزاهة، حماية الخصوصية.
+                - كيفية التعامل مع الثغرات المكتشفة بشكل مسؤول.
+                - الشهادات المعترف بها في مجال الهكر الأخلاقي (CEH، OSCP، eJPT).
+                المقال يوضح أهمية الالتزام بالأخلاقيات والقوانين في ممارسة الهكر الأخلاقي لضمان مهنة مستدامة وآمنة.
+            </p>
+            <a href="#" class="read-more inline-flex items-center gap-2">
+                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
+            </a>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="index.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 transition px-8 py-3 rounded-full font-bold shadow-lg">← العودة للرئيسية</a>
+        </div>
+
+    </div>
+
+    <footer class="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
+        <p>جميع الحقوق محفوحة © 2026 | Amin Saad (AminVZD) | مقالات الأمن السيبراني</p>
+    </footer>
+
+</body>
+</html>
