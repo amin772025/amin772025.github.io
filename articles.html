@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أمين سعد | مقالات في الأمن السيبراني والهكر الأخلاقي</title>
+    <title>أمين سعد | مقالات الأمن السيبراني والهكر الأخلاقي</title>
     
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1061/1061175.png">
     
-    <meta name="description" content="مجموعة مقالات تعليمية في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، أدوات الاختراق، ولغات البرمجة من أمين سعد.">
-    <meta name="keywords" content="مقالات أمن سيبراني, مقالات هكر, تعلم الاختراق, اختبار اختراق, Nmap, Python, أمن المعلومات, أول هكر في مصر, أول هكر في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, Cybersecurity Articles, Hacking Tutorials, Penetration Testing Guide, Ethical Hacking Articles, Learn Cybersecurity, Hacking Guides, Security Research, Infosec Articles, Cyber Security Blog, Hacking Blog, Security Tutorials, Hacking for Beginners, Cyber Security Guide, Ethical Hacking Course, Hacking Tools Tutorial, Network Security, Web Security, Application Security, Mobile Security, Cloud Security, IoT Security, Cyber Security News, Security Analysis, Threat Intelligence, Vulnerability Research, Exploit Development, Reverse Engineering, Malware Analysis, Digital Forensics, Security Operations, Incident Response, Security Awareness, Cyber Defense, Cyber Attack, Security Best Practices, Security Frameworks, OWASP, NIST, CIS Controls, Zero Trust, DevSecOps, Security Automation, AI in Cybersecurity, Machine Learning Security, Blockchain Security, Cryptography, Network Security, Wireless Security, Web Application Security, API Security, Container Security, Kubernetes Security, Serverless Security, DevSecOps, Security Tools, Security Auditing, Compliance, Risk Management, Security Governance, Security Strategy, Security Training, Security Certifications, Security Career, Security Jobs, Security Trends, Security Future, Cybersecurity Egypt, Ethical Hacking Egypt, Penetration Testing Egypt, Security Research Egypt, Cyber Security Blog Egypt, Hacking Blog Egypt">
+    <meta name="description" content="مقالات تعليمية شاملة في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، وأدوات الاختراق من أمين سعد.">
+    <meta name="keywords" content="مقالات أمن سيبراني, مقالات هكر, تعلم الاختراق, اختبار اختراق, Nmap, Python, أمن المعلومات, أول هكر في مصر, أول هكر في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, أفضل مبرمج في سوهاج, Cybersecurity Articles, Hacking Tutorials, Penetration Testing Guide, Ethical Hacking Articles, Learn Cybersecurity, Hacking Guides, Security Research, Infosec Articles, Cyber Security Blog, Hacking Blog, Security Tutorials, Hacking for Beginners, Cyber Security Guide, Ethical Hacking Course, Hacking Tools Tutorial, Network Security, Web Security, Application Security, Mobile Security, Cloud Security, IoT Security, Cyber Security News, Security Analysis, Threat Intelligence, Vulnerability Research, Exploit Development, Reverse Engineering, Malware Analysis, Digital Forensics, Security Operations, Incident Response, Security Awareness, Cyber Defense, Cyber Attack, Security Best Practices, Security Frameworks, OWASP, NIST, CIS Controls, Zero Trust, DevSecOps, Security Automation, AI in Cybersecurity, Machine Learning Security, Blockchain Security, Cryptography, Network Security, Wireless Security, Web Application Security, API Security, Container Security, Kubernetes Security, Serverless Security, DevSecOps, Security Tools, Security Auditing, Compliance, Risk Management, Security Governance, Security Strategy, Security Training, Security Certifications, Security Career, Security Jobs, Security Trends, Security Future, Cybersecurity Egypt, Ethical Hacking Egypt, Penetration Testing Egypt, Security Research Egypt, Cyber Security Blog Egypt, Hacking Blog Egypt">
     <meta name="author" content="Amin Saad - AminVZD">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://amin772025.github.io/articles.html">
 
     <meta property="og:title" content="أمين سعد | مقالات الأمن السيبراني">
-    <meta property="og:description" content="مجموعة مقالات تعليمية في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، وأدوات الاختراق">
+    <meta property="og:description" content="مقالات تعليمية شاملة في الأمن السيبراني، الهكر الأخلاقي، اختبار الاختراق، وأدوات الاختراق">
     <meta property="og:url" content="https://amin772025.github.io/articles.html">
     <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "إزاي الطالب المصري يحمي نفسه من الاختراقات؟",
+      "author": {
+        "@type": "Person",
+        "name": "أمين سعد"
+      },
+      "datePublished": "2026-06-27",
+      "description": "دليل بسيط للمبتدئين لحماية أنفسهم من المخاطر الرقمية."
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -38,8 +52,6 @@
             z-index: 0;
         }
         .glow-text { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
-        .card-hover { transition: all 0.3s ease; border: 1px solid rgba(16,185,129,0.15); }
-        .card-hover:hover { transform: translateY(-5px); border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.3); }
         .telegram-float {
             position: fixed;
             bottom: 25px;
@@ -58,24 +70,80 @@
         .telegram-float:hover { transform: scale(1.1); }
         .nav-links a { transition: all 0.3s ease; }
         .nav-links a:hover { color: #10b981; transform: translateY(-2px); }
-        .section-title { border-right: 4px solid #10b981; padding-right: 12px; }
-        .article-card { transition: all 0.3s ease; }
-        .article-card:hover { background: rgba(16,185,129,0.05); border-color: #10b981; }
-        .badge {
+        .article-full {
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+        .article-full:hover {
+            border-color: #10b981;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+        }
+        .article-full h2 {
+            color: #10b981;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            border-right: 4px solid #10b981;
+            padding-right: 15px;
+        }
+        .article-full h3 {
+            color: #34d399;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .article-full p {
+            color: #d1d5db;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .article-full ul, .article-full ol {
+            color: #d1d5db;
+            line-height: 1.9;
+            font-size: 16px;
+            padding-right: 25px;
+            margin-bottom: 15px;
+        }
+        .article-full li {
+            margin-bottom: 8px;
+        }
+        .article-full .code-block {
+            background: #0a0f1a;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            color: #10b981;
+            font-size: 14px;
+            border: 1px solid rgba(16,185,129,0.2);
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            margin: 15px 0;
+            white-space: pre-wrap;
+        }
+        .article-full .badge {
             background: rgba(16, 185, 129, 0.15);
             color: #10b981;
-            padding: 2px 10px;
+            padding: 4px 14px;
             border-radius: 50px;
-            font-size: 11px;
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 8px;
+            margin-bottom: 8px;
         }
-        .read-more {
-            color: #10b981;
-            transition: all 0.3s ease;
-            font-weight: 500;
+        .badge-section {
+            margin-bottom: 15px;
         }
-        .read-more:hover {
-            color: #34d399;
-            transform: translateX(-5px);
+        @media (max-width: 768px) {
+            .article-full { padding: 18px; }
+            .article-full h2 { font-size: 22px; }
         }
     </style>
 </head>
@@ -107,195 +175,362 @@
             <span class="text-white">مقالات الأمن السيبراني</span>
             <span class="text-emerald-400 glow-text"> | Articles</span>
         </h1>
-        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ مقالات تعليمية في الهكر الأخلاقي والأمن السيبراني ⚡</p>
-        <p class="text-gray-400 max-w-2xl mx-auto mt-4">مجموعة من المقالات الشاملة لمساعدتك في فهم أساسيات الأمن السيبراني واختبار الاختراق</p>
+        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ مقالات تعليمية شاملة في الهكر الأخلاقي والأمن السيبراني ⚡</p>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">مجموعة من المقالات المفصلة لمساعدتك في فهم أساسيات الأمن السيبراني واختبار الاختراق</p>
     </div>
 
     <div class="container mx-auto px-6 py-10 max-w-5xl">
 
-        <!-- المقال 1 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
+        <!-- المقال 1: مقدمة في الأمن السيبراني -->
+        <div class="article-full">
+            <div class="badge-section">
                 <span class="badge">مقدمة</span>
                 <span class="badge">أمن سيبراني</span>
                 <span class="badge">مبتدئين</span>
             </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🔰 مقدمة في الأمن السيبراني للمبتدئين</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                الأمن السيبراني هو حماية الأنظمة والشبكات والبيانات من الهجمات الرقمية. يشمل مجالات متعددة مثل أمن الشبكات، أمن التطبيقات، وأمن المعلومات. 
-                في هذا المقال، نتعرف على المفاهيم الأساسية: ما هو الأمن السيبراني؟ ما هي أنواع التهديدات؟ ما هي أفضل الممارسات للحماية؟ 
-                نغطي أيضاً الفرق بين الهكر الأخلاقي والهاكر الضار، وأهمية الوعي الأمني في العصر الرقمي. المقال موجه للمبتدئين الذين يرغبون في فهم أساسيات الأمن السيبراني وبدء رحلتهم في هذا المجال.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
+            <h2>🔰 مقدمة في الأمن السيبراني للمبتدئين</h2>
+            
+            <h3>ما هو الأمن السيبراني؟</h3>
+            <p>الأمن السيبراني هو الممارسة التي تهدف إلى حماية الأنظمة والشبكات والبرامج والبيانات من الهجمات الرقمية. في عصرنا الحالي، أصبحت التهديدات السيبرانية أكثر تعقيداً وتنوعاً، مما يجعل الأمن السيبراني ضرورة أساسية للأفراد والشركات والحكومات على حد سواء.</p>
+            
+            <h3>أهمية الأمن السيبراني</h3>
+            <p>مع تزايد الاعتماد على التكنولوجيا في جميع جوانب الحياة، أصبحت الهجمات السيبرانية تشكل خطراً حقيقياً على:</p>
+            <ul>
+                <li><strong>البيانات الشخصية:</strong> مثل معلومات الحسابات البنكية، والصور، والرسائل الخاصة.</li>
+                <li><strong>الشركات والمؤسسات:</strong> حيث يمكن أن تؤدي الهجمات إلى خسائر مالية كبيرة وفقدان ثقة العملاء.</li>
+                <li><strong>الأمن القومي:</strong> حيث تستهدف الهجمات السيبرانية البنية التحتية الحيوية مثل شبكات الكهرباء والمياه.</li>
+            </ul>
+            
+            <h3>أنواع التهديدات السيبرانية</h3>
+            <ul>
+                <li><strong>البرامج الضارة (Malware):</strong> مثل الفيروسات، الديدان، أحصنة طروادة، وبرامج الفدية.</li>
+                <li><strong>هجمات التصيد (Phishing):</strong> محاولة الحصول على معلومات حساسة عن طريق انتحال شخصية موثوقة.</li>
+                <li><strong>هجمات حجب الخدمة (DDoS):</strong> إغراق الخوادم بطلبات وهمية لتعطيل الخدمة.</li>
+                <li><strong>هجمات الهندسة الاجتماعية:</strong> استغلال الجوانب النفسية للبشر للحصول على معلومات.</li>
+                <li><strong>استغلال الثغرات:</strong> استغلال عيوب في البرامج أو الأنظمة للوصول غير المصرح به.</li>
+            </ul>
+            
+            <h3>أفضل الممارسات للحماية</h3>
+            <ul>
+                <li><strong>استخدام كلمات مرور قوية:</strong> كلمات مرور معقدة وتغييرها بشكل دوري.</li>
+                <li><strong>التحديث المستمر:</strong> تحديث الأنظمة والبرامج بانتظام لسد الثغرات الأمنية.</li>
+                <li><strong>استخدام المصادقة متعددة العوامل (MFA):</strong> طبقة إضافية من الأمان.</li>
+                <li><strong>التوعية الأمنية:</strong> تدريب الموظفين والأفراد على كيفية التعرف على الهجمات.</li>
+                <li><strong>عمل نسخ احتياطية:</strong> حفظ نسخ من البيانات المهمة في مكان آمن.</li>
+            </ul>
+            
+            <h3>الفرق بين الهكر الأخلاقي والهاكر الضار</h3>
+            <p>الهكر الأخلاقي (Ethical Hacker) هو شخص يستخدم مهاراته في الاختراق لصالح حماية الأنظمة، ويعمل بإذن قانوني من مالك النظام. بينما الهاكر الضار (Black Hat) هو شخص يخترق الأنظمة بغرض التدمير أو السرقة أو الابتزاز دون إذن.</p>
+            
+            <h3>كيف تبدأ رحلتك في الأمن السيبراني؟</h3>
+            <p>إذا كنت مبتدئاً وترغب في دخول مجال الأمن السيبراني، إليك الخطوات الأساسية:</p>
+            <ul>
+                <li>تعلم أساسيات الشبكات وأنظمة التشغيل (خاصة Linux).</li>
+                <li>تعلم لغة برمجة مثل Python أو JavaScript.</li>
+                <li>تعرف على أدوات الاختراق الأساسية مثل Nmap و Wireshark و Burp Suite.</li>
+                <li>اختبر مهاراتك في بيئات قانونية مثل Hack The Box أو TryHackMe.</li>
+                <li>احصل على شهادات معترف بها مثل CEH أو CompTIA Security+ أو eJPT.</li>
+            </ul>
+            <p>تذكر أن التعلم المستمر والتطبيق العملي هما مفتاح النجاح في هذا المجال.</p>
         </div>
 
-        <!-- المقال 2 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
+        <!-- المقال 2: كيف تبدأ في اختبار الاختراق -->
+        <div class="article-full">
+            <div class="badge-section">
                 <span class="badge">اختبار اختراق</span>
                 <span class="badge">Penetration Testing</span>
                 <span class="badge">خطوات</span>
             </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🛡️ كيف تبدأ في اختبار الاختراق (Penetration Testing)؟</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                اختبار الاختراق هو عملية محاكاة هجمات سيبرانية على نظام لاكتشاف الثغرات قبل أن يستغلها المهاجمون. 
-                في هذا المقال الشامل، نتعرف على الخطوات الأساسية لاختبار الاختراق: 
-                1. جمع المعلومات (Reconnaissance) - كيفية جمع البيانات عن الهدف.
-                2. المسح (Scanning) - استخدام أدوات مثل Nmap لاكتشاف المنافذ والخدمات.
-                3. استغلال الثغرات (Exploitation) - كيفية استغلال الثغرات باستخدام Metasploit.
-                4. الحفاظ على الوصول (Maintaining Access) - إدارة الجلسات.
-                5. تقديم التقارير (Reporting) - كتابة تقرير احترافي عن الثغرات المكتشفة.
-                المقال يشرح أيضاً الأدوات الأساسية وأفضل الممارسات في اختبار الاختراق الأخلاقي.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
+            <h2>🛡️ كيف تبدأ في اختبار الاختراق (Penetration Testing)؟</h2>
+            
+            <h3>ما هو اختبار الاختراق؟</h3>
+            <p>اختبار الاختراق (Penetration Testing) هو عملية محاكاة هجمات سيبرانية على نظام أو شبكة أو تطبيق بهدف اكتشاف الثغرات الأمنية قبل أن يستغلها المهاجمون الحقيقيون. يعتبر اختبار الاختراق جزءاً أساسياً من استراتيجية الأمن السيبراني لأي مؤسسة.</p>
+            
+            <h3>خطوات اختبار الاختراق الأساسية</h3>
+            
+            <h3>1. جمع المعلومات (Reconnaissance)</h3>
+            <p>في هذه المرحلة، يقوم المختبر بجمع أكبر قدر ممكن من المعلومات عن الهدف. تشمل هذه المعلومات:</p>
+            <ul>
+                <li>أسماء النطاقات (Domains).</li>
+                <li>عناوين IP.</li>
+                <li>الخدمات المشغلة (خدمات الويب، البريد الإلكتروني، FTP، إلخ).</li>
+                <li>معلومات عن الموظفين والبريد الإلكتروني.</li>
+            </ul>
+            <p><strong>أدوات شائعة:</strong> Nmap, theHarvester, Shodan, Maltego.</p>
+            
+            <h3>2. المسح (Scanning)</h3>
+            <p>بعد جمع المعلومات، تأتي مرحلة المسح حيث يتم استخدام الأدوات لاكتشاف المنافذ المفتوحة والخدمات المشغلة ونظام التشغيل.</p>
+            <div class="code-block">nmap -sV -sC 192.168.1.1</div>
+            <p><strong>أدوات شائعة:</strong> Nmap, Masscan, Zenmap.</p>
+            
+            <h3>3. استغلال الثغرات (Exploitation)</h3>
+            <p>في هذه المرحلة، يحاول المختبر استغلال الثغرات المكتشفة للحصول على وصول غير مصرح به إلى النظام أو التطبيق.</p>
+            <div class="code-block">msfconsole
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.1.10
+run</div>
+            <p><strong>أدوات شائعة:</strong> Metasploit, Burp Suite, SQLmap.</p>
+            
+            <h3>4. الحفاظ على الوصول (Maintaining Access)</h3>
+            <p>بعد نجاح الاستغلال، يحاول المختبر الحفاظ على وصوله للنظام لتقييم الأضرار المحتملة وجمع المزيد من المعلومات.</p>
+            <p><strong>أدوات شائعة:</strong> Meterpreter, Netcat, Powershell Empire.</p>
+            
+            <h3>5. تقديم التقارير (Reporting)</h3>
+            <p>المرحلة الأخيرة والأهم، حيث يقوم المختبر بتوثيق جميع الثغرات المكتشفة، وطرق استغلالها، وتقديم توصيات لإصلاحها.</p>
+            
+            <h3>أنواع اختبارات الاختراق</h3>
+            <ul>
+                <li><strong>الصندوق الأسود (Black Box):</strong> المختبر لا يعرف شيئاً عن النظام مسبقاً.</li>
+                <li><strong>الصندوق الأبيض (White Box):</strong> المختبر لديه معرفة كاملة بالنظام والكود المصدري.</li>
+                <li><strong>الصندوق الرمادي (Grey Box):</strong> المختبر لديه معرفة جزئية بالنظام.</li>
+            </ul>
+            
+            <h3>نصائح للمبتدئين في اختبار الاختراق</h3>
+            <ul>
+                <li>احصل دائماً على إذن كتابي قبل إجراء أي اختبار.</li>
+                <li>اختبر في بيئات قانونية مثل Hack The Box أو TryHackMe.</li>
+                <li>تعلم من تجارب الآخرين واقرأ تقارير الاختبارات السابقة.</li>
+                <li>كن صبوراً، فالاختبار يتطلب وقتاً وجهداً كبيرين.</li>
+            </ul>
         </div>
 
-        <!-- المقال 3 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
+        <!-- المقال 3: شرح أداة Nmap -->
+        <div class="article-full">
+            <div class="badge-section">
                 <span class="badge">Nmap</span>
                 <span class="badge">مسح الشبكات</span>
                 <span class="badge">أدوات</span>
             </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🌐 شرح أداة Nmap بالعربي - دليل شامل</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                Nmap (Network Mapper) هي أداة مفتوحة المصدر لاستكشاف الشبكات وأمنها، تعتبر من أهم أدوات أي هكر أخلاقي.
-                في هذا المقال، نتعلم:
-                - كيفية تثبيت Nmap على Kali Linux و Windows.
-                - الأوامر الأساسية: مسح المنافذ (Port Scanning)، اكتشاف الخدمات (Service Detection)، تحديد نظام التشغيل (OS Detection).
-                - أمثلة عملية: `nmap -sV -sC 192.168.1.1`، `nmap -p 80,443 192.168.1.0/24`.
-                - استخدام Nmap Scripting Engine (NSE) لاكتشاف الثغرات.
-                - تحليل النتائج وتفسيرها.
-                المقال يقدم شرحاً وافياً لكل أمر مع أمثلة واقعية، مناسب للمبتدئين والمحترفين.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
+            <h2>🌐 شرح أداة Nmap بالعربي - دليل شامل</h2>
+            
+            <h3>ما هي أداة Nmap؟</h3>
+            <p>Nmap (Network Mapper) هي أداة مفتوحة المصدر تستخدم لاستكشاف الشبكات وأمنها. تعتبر Nmap من أهم الأدوات في ترسانة أي هكر أخلاقي أو مسؤول أمن سيبراني. تستخدم Nmap في:</p>
+            <ul>
+                <li>اكتشاف الأجهزة المتصلة بالشبكة.</li>
+                <li>فحص المنافذ المفتوحة.</li>
+                <li>تحديد الخدمات المشغلة وأنظمة التشغيل.</li>
+                <li>اكتشاف الثغرات الأمنية باستخدام محرك NSE.</li>
+            </ul>
+            
+            <h3>تثبيت Nmap</h3>
+            <p>يمكن تثبيت Nmap على أنظمة التشغيل المختلفة:</p>
+            <ul>
+                <li><strong>Kali Linux / Debian:</strong> <code>sudo apt install nmap</code></li>
+                <li><strong>Windows:</strong> تحميل المثبت من الموقع الرسمي.</li>
+                <li><strong>macOS:</strong> <code>brew install nmap</code></li>
+            </ul>
+            
+            <h3>الأوامر الأساسية في Nmap</h3>
+            
+            <h4>1. مسح المنافذ الأساسي</h4>
+            <div class="code-block">nmap 192.168.1.1</div>
+            <p>يقوم بمسح أشهر 1000 منفذ على الهدف.</p>
+            
+            <h4>2. مسح منافذ محددة</h4>
+            <div class="code-block">nmap -p 80,443,22 192.168.1.1</div>
+            <p>مسح منافذ محددة (HTTP, HTTPS, SSH).</p>
+            
+            <h4>3. مسح نطاق من العناوين</h4>
+            <div class="code-block">nmap -p 80 192.168.1.0/24</div>
+            <p>مسح المنفذ 80 على جميع الأجهزة في النطاق.</p>
+            
+            <h4>4. اكتشاف الخدمات وأنظمة التشغيل</h4>
+            <div class="code-block">nmap -sV -O 192.168.1.1</div>
+            <p>يكتشف الخدمات المشغلة ونسخها ويحاول تحديد نظام التشغيل.</p>
+            
+            <h4>5. مسح شامل باستخدام NSE</h4>
+            <div class="code-block">nmap -sV -sC 192.168.1.1</div>
+            <p>استخدام السكربتات الافتراضية لـ NSE لاكتشاف الثغرات الشائعة.</p>
+            
+            <h4>6. مسح سريع للمنافذ الشائعة</h4>
+            <div class="code-block">nmap -F 192.168.1.1</div>
+            <p>مسح سريع لأشهر المنافذ (أقل من 100 منفذ).</p>
+            
+            <h3>تحليل النتائج</h3>
+            <p>بعد تشغيل Nmap، ستحصل على نتائج تشبه التالي:</p>
+            <div class="code-block">PORT     STATE    SERVICE    VERSION
+22/tcp   open     ssh        OpenSSH 7.2p2 Ubuntu 4ubuntu2.10
+80/tcp   open     http       Apache httpd 2.4.18
+443/tcp  open     https      Apache httpd 2.4.18
+3306/tcp closed   mysql</div>
+            <p>يمكن استخدام هذه المعلومات لتحديد نقاط الدخول المحتملة واستغلال الثغرات.</p>
+            
+            <h3>نصائح متقدمة</h3>
+            <ul>
+                <li>استخدم <code>-sS</code> (TCP SYN Scan) للمسح الخفي.</li>
+                <li>استخدم <code>-A</code> للمسح الشامل (OS, Version, Scripts, Traceroute).</li>
+                <li>استخدم <code>--script</code> لتشغيل سكربتات محددة مثل <code>--script vuln</code>.</li>
+            </ul>
         </div>
 
-        <!-- المقال 4 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
+        <!-- المقال 4: Python للأمن السيبراني -->
+        <div class="article-full">
+            <div class="badge-section">
                 <span class="badge">Python</span>
                 <span class="badge">أتمتة</span>
                 <span class="badge">أدوات</span>
             </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🐍 كتابة أدوات الاختراق باستخدام Python</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                Python هي اللغة الأكثر استخداماً في مجال الأمن السيبراني لكتابة أدوات الاختراق والأتمتة.
-                في هذا المقال، نتعلم:
-                - أساسيات Python للأمن السيبراني.
-                - كيفية كتابة سكربت لمسح المنافذ باستخدام مكتبة Socket.
-                - استخدام مكتبة Requests لإرسال طلبات HTTP وتحليل الاستجابات.
-                - كتابة أداة OSINT لجمع المعلومات من APIs.
-                - تطوير سكربت لاستغلال ثغرة SQL Injection باستخدام SQLmap API.
-                - أمثلة عملية لسكربتات Web Scraping وتحليل البيانات.
-                المقال يقدم شروحات وأكواد عملية يمكنك تجربتها مباشرة.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
+            <h2>🐍 كتابة أدوات الاختراق باستخدام Python</h2>
+            
+            <h3>لماذا Python في الأمن السيبراني؟</h3>
+            <p>Python هي اللغة الأكثر استخداماً في مجال الأمن السيبراني، وذلك للأسباب التالية:</p>
+            <ul>
+                <li><strong>سهولة التعلم:</strong> تركيبها بسيط وقريب من اللغة الإنجليزية.</li>
+                <li><strong>مكتبات غنية:</strong> مكتبات مثل Scapy، Requests، Nmap، Paramiko، وغيرها.</li>
+                <li><strong>سرعة التطوير:</strong> يمكنك كتابة أدوات معقدة في وقت قصير.</li>
+                <li><strong>مجتمع كبير:</strong> الكثير من المصادر والدعم عبر الإنترنت.</li>
+            </ul>
+            
+            <h3>كتابة سكربت لمسح المنافذ باستخدام Socket</h3>
+            <p>هذا سكربت بسيط لمسح منفذ معين على هدف:</p>
+            <div class="code-block">import socket
+
+def scan_port(ip, port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(2)
+        result = sock.connect_ex((ip, port))
+        if result == 0:
+            print(f"[+] Port {port} is OPEN")
+        else:
+            print(f"[-] Port {port} is CLOSED")
+        sock.close()
+    except Exception as e:
+        print(f"[!] Error: {e}")
+
+if __name__ == "__main__":
+    target = "192.168.1.1"
+    for port in range(20, 25):
+        scan_port(target, port)</div>
+            <p>هذا السكربت يمسح المنافذ من 20 إلى 24 على الهدف ويطبع حالة كل منفذ.</p>
+            
+            <h3>استخدام مكتبة Requests لإرسال طلبات HTTP</h3>
+            <p>مكتبة Requests تستخدم لإرسال طلبات HTTP وتحليل الاستجابات:</p>
+            <div class="code-block">import requests
+
+def check_website(url):
+    try:
+        response = requests.get(url, timeout=5)
+        print(f"[+] {url} - Status: {response.status_code}")
+        print(f"    Headers: {response.headers}")
+        return response
+    except Exception as e:
+        print(f"[-] {url} - Error: {e}")
+
+if __name__ == "__main__":
+    check_website("http://example.com")</div>
+            
+            <h3>كتابة أداة OSINT لجمع المعلومات من APIs</h3>
+            <div class="code-block">import requests
+
+def get_ip_info(ip):
+    try:
+        response = requests.get(f"http://ip-api.com/json/{ip}")
+        data = response.json()
+        if data['status'] == 'success':
+            print(f"[+] IP: {data['query']}")
+            print(f"    Country: {data['country']}")
+            print(f"    City: {data['city']}")
+            print(f"    ISP: {data['isp']}")
+        else:
+            print("[-] Failed to get IP info")
+    except Exception as e:
+        print(f"[!] Error: {e}")
+
+if __name__ == "__main__":
+    get_ip_info("8.8.8.8")</div>
+            
+            <h3>تطوير سكربت لاستغلال SQL Injection (باستخدام SQLmap API)</h3>
+            <p>يمكن استخدام SQLmap كـ API لاستغلال ثغرات SQL Injection:</p>
+            <div class="code-block">import subprocess
+
+def sql_injection_test(url):
+    try:
+        cmd = f"sqlmap -u '{url}' --batch --dbs"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        print(result.stdout)
+    except Exception as e:
+        print(f"[!] Error: {e}")
+
+if __name__ == "__main__":
+    sql_injection_test("http://example.com/page?id=1")</div>
+            
+            <h3>نصائح لتطوير أدوات الاختراق</h3>
+            <ul>
+                <li>استخدم مكتبات جاهزة بدلاً من كتابة كل شيء من الصفر.</li>
+                <li>اختبر أدواتك في بيئات قانونية فقط.</li>
+                <li>أضف معالجة الأخطاء لجعل أدواتك أكثر استقراراً.</li>
+                <li>اكتب تعليقات في الكود لتسهيل الصيانة والتطوير.</li>
+            </ul>
         </div>
 
-        <!-- المقال 5 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
+        <!-- المقال 5: دليل OSINT -->
+        <div class="article-full">
+            <div class="badge-section">
                 <span class="badge">OSINT</span>
                 <span class="badge">جمع معلومات</span>
                 <span class="badge">استطلاع</span>
             </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">🔍 دليل جمع المعلومات مفتوحة المصدر (OSINT)</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                OSINT (Open Source Intelligence) هو عملية جمع وتحليل المعلومات من مصادر مفتوحة ومتاحة للعموم.
-                في هذا المقال الشامل، نتعرف على:
-                - ما هو OSINT ولماذا هو مهم في اختبار الاختراق؟
-                - أدوات OSINT الشهيرة: Maltego، theHarvester، Shodan، Recon-ng.
-                - كيفية جمع المعلومات عن الأفراد والشركات والنطاقات.
-                - استخدام محركات البحث المتقدمة (Google Dorks) لجمع المعلومات.
-                - تحليل البيانات واستخلاص المعلومات القيمة.
-                - أمثلة عملية على جمع المعلومات باستخدام أدوات OSINT المختلفة.
-                المقال يشرح تقنيات متقدمة لجمع المعلومات بشكل قانوني وأخلاقي.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
-        </div>
-
-        <!-- المقال 6 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
-                <span class="badge">Metasploit</span>
-                <span class="badge">استغلال</span>
-                <span class="badge">ثغرات</span>
-            </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">💣 شرح إطار عمل Metasploit للمبتدئين</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                Metasploit هو إطار عمل قوي لتطوير واستغلال الثغرات الأمنية، يعتبر من أهم أدوات اختبار الاختراق.
-                في هذا المقال، نتعلم:
-                - ما هو Metasploit وما هي مكوناته الأساسية؟
-                - كيفية تشغيل Metasploit في Kali Linux.
-                - هيكل Metasploit: Exploits، Payloads، Auxiliary modules، Encoders.
-                - كيفية البحث عن ثغرة واستغلالها: `search`، `use`، `set RHOSTS`، `run`.
-                - مثال عملي: استغلال ثغرة MS17-010 (EternalBlue) في نظام Windows.
-                - استخدام Meterpreter للحفاظ على الوصول وجمع المعلومات.
-                - كتابة سكربتات Metasploit بلغة Ruby.
-                المقال يوفر دليلاً عملياً خطوة بخطوة لاستخدام Metasploit في اختبار الاختراق الأخلاقي.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
-        </div>
-
-        <!-- المقال 7 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
-                <span class="badge">Wi-Fi</span>
-                <span class="badge">شبكات لاسلكية</span>
-                <span class="badge">اختراق</span>
-            </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">📶 اختبار أمان الشبكات اللاسلكية (Wi-Fi) باستخدام Aircrack-ng</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                أمن الشبكات اللاسلكية هو جزء مهم من الأمن السيبراني. Aircrack-ng هي مجموعة أدوات لاختبار أمان Wi-Fi.
-                في هذا المقال، نتعلم:
-                - تثبيت Aircrack-ng على Kali Linux.
-                - وضع بطاقة الشبكة في وضع المراقبة (Monitor Mode).
-                - اكتشاف الشبكات اللاسلكية: `airodump-ng`.
-                - التقاط حزم الـ Handshake.
-                - كسر تشفير WEP و WPA/WPA2.
-                - استخدام هجمات القاموس وكسر التشفير.
-                - حماية الشبكات اللاسلكية من الهجمات.
-                المقال يقدم دليلاً عملياً لاختبار أمان شبكات Wi-Fi في بيئات قانونية.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
-        </div>
-
-        <!-- المقال 8 -->
-        <div class="article-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mb-6">
-            <div class="flex flex-wrap gap-2 mb-3">
-                <span class="badge">أخلاقيات</span>
-                <span class="badge">قانون</span>
-                <span class="badge">الهكر الأخلاقي</span>
-            </div>
-            <h2 class="text-2xl font-bold text-emerald-400 mb-3">⚖️ أخلاقيات وقانون الهكر الأخلاقي</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                الهكر الأخلاقي هو ممارسة اختبار الاختراق بإذن قانوني وهدف حماية الأنظمة. في هذا المقال، نتعرف على:
-                - الفرق بين الهكر الأخلاقي والهاكر غير الأخلاقي.
-                - القوانين المتعلقة باختبار الاختراق في مصر والعالم.
-                - اتفاقيات عدم الإفصاح (NDA) والإذن القانوني (Authorization).
-                - أخلاقيات الهكر الأخلاقي: الصدق، النزاهة، حماية الخصوصية.
-                - كيفية التعامل مع الثغرات المكتشفة بشكل مسؤول.
-                - الشهادات المعترف بها في مجال الهكر الأخلاقي (CEH، OSCP، eJPT).
-                المقال يوضح أهمية الالتزام بالأخلاقيات والقوانين في ممارسة الهكر الأخلاقي لضمان مهنة مستدامة وآمنة.
-            </p>
-            <a href="#" class="read-more inline-flex items-center gap-2">
-                <i class="fa-regular fa-circle-left"></i> اقرأ المقال كاملاً
-            </a>
+            <h2>🔍 دليل جمع المعلومات مفتوحة المصدر (OSINT)</h2>
+            
+            <h3>ما هو OSINT؟</h3>
+            <p>OSINT (Open Source Intelligence) هو عملية جمع وتحليل المعلومات من المصادر المتاحة للعموم. يعتبر OSINT جزءاً أساسياً من أي عملية اختبار اختراق، حيث يساعد في فهم الهدف وتحديد نقاط الضعف المحتملة.</p>
+            
+            <h3>أنواع مصادر OSINT</h3>
+            <ul>
+                <li><strong>محركات البحث:</strong> Google، Bing، Yahoo.</li>
+                <li><strong>وسائل التواصل الاجتماعي:</strong> Facebook، Twitter، LinkedIn، Instagram.</li>
+                <li><strong>مواقع العمل الحكومية:</strong> سجلات الشركات، العقود الحكومية.</li>
+                <li><strong>قواعد البيانات المفتوحة:</strong> Shodan، Censys، Binary Edge.</li>
+                <li><strong>المنتديات والمدونات:</strong> Reddit، Stack Overflow، Medium.</li>
+            </ul>
+            
+            <h3>أدوات OSINT الشهيرة</h3>
+            
+            <h4>1. Maltego</h4>
+            <p>أداة قوية لتحليل العلاقات بين البيانات. تستخدم لرسم خريطة للعلاقات بين الأشخاص، الشركات، النطاقات، وعناوين البريد الإلكتروني.</p>
+            
+            <h4>2. theHarvester</h4>
+            <p>أداة لجمع عناوين البريد الإلكتروني وأسماء النطاقات من محركات البحث ومواقع مثل LinkedIn.</p>
+            <div class="code-block">theHarvester -d example.com -b google</div>
+            
+            <h4>3. Shodan</h4>
+            <p>محرك بحث للأجهزة المتصلة بالإنترنت. يكشف عن الأجهزة والخدمات المكشوفة.</p>
+            <div class="code-block">shodan search "port:22"</div>
+            
+            <h4>4. Recon-ng</h4>
+            <p>إطار عمل متقدم لجمع المعلومات، يحتوي على العديد من الوحدات (Modules) المخصصة.</p>
+            <div class="code-block">recon-ng
+marketplace install all
+workspace create example
+use recon/domains-hosts/google_site_web
+set source example.com
+run</div>
+            
+            <h4>5. Google Dorks</h4>
+            <p>استخدام أوامر بحث متقدمة في Google للكشف عن معلومات حساسة:</p>
+            <div class="code-block">site:example.com filetype:pdf
+inurl:admin
+intitle:"index of" "parent directory"</div>
+            
+            <h3>تقنيات متقدمة في OSINT</h3>
+            <ul>
+                <li><strong>تحليل الميتاداتا:</strong> استخراج المعلومات المخفية من الملفات (PDF، صور، مستندات).</li>
+                <li><strong>تتبع البريد الإلكتروني:</strong> استخدام أدوات مثل Hunter.io لتتبع عناوين البريد الإلكتروني.</li>
+                <li><strong>تحليل الشبكات الاجتماعية:</strong> رسم خريطة للعلاقات بين الأفراد.</li>
+                <li><strong>استخدام APIs:</strong> جمع البيانات من APIs المفتوحة مثل Twitter API و Facebook API.</li>
+            </ul>
+            
+            <h3>أخلاقيات OSINT</h3>
+            <p>عند جمع المعلومات، يجب الالتزام بالأخلاقيات والقوانين. تأكد من أنك تستخدم المعلومات التي تجمعها لأغراض قانونية وأخلاقية، وأنك لا تنتهك خصوصية الأفراد.</p>
+            
+            <h3>نصائح لتحسين مهارات OSINT</h3>
+            <ul>
+                <li>تدرب على أدوات OSINT المختلفة وافهم إمكانياتها.</li>
+                <li>تعلم تقنيات البحث المتقدمة في محركات البحث.</li>
+                <li>تابع المصادر والأخبار المتعلقة بـ OSINT.</li>
+                <li>شارك في مجتمعات OSINT (مثل Reddit r/OSINT).</li>
+            </ul>
         </div>
 
         <div class="text-center mt-8">
