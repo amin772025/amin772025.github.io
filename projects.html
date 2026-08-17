@@ -15,14 +15,14 @@
     
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1061/1061175.png">
     
-    <meta name="description" content="مشاريع أمين سعد (Amin Saad) في الأمن السيبراني والهكر الأخلاقي وتطوير التطبيقات وبرمجة الألعاب.">
-    <meta name="keywords" content="أمين سعد, Amin Saad, أول هكر أخلاقي في مصر, أول هكر أخلاقي في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, أفضل مبرمج في سوهاج, مشاريع هكر, Hacker School, Hemo Glow, RONY BOT, Amin Zero-Day, Python, Node.js, OSINT, Web Scraping, Android Modding, Ethical Hacking Projects, Cybersecurity Projects, penetration testing tools, hacking scripts, bug bounty projects, security tools">
+    <meta name="description" content="مشاريع أمين سعد (Amin Saad) - أول هكر أخلاقي في سوهاج، مصر. استعراض مشاريعي في الأمن السيبراني، الهكر الأخلاقي، تطوير التطبيقات، وبرمجة الألعاب. يشمل مشروع Vixo (تطبيق عدسة مكبرة للشاشة)، Hacker School، Hemo Glow، RONY BOT، وأدوات الأتمتة.">
+    <meta name="keywords" content="أمين سعد, Amin Saad, أول هكر أخلاقي في مصر, أول هكر أخلاقي في سوهاج, أفضل هكر في مصر, أفضل هكر في سوهاج, أفضل مبرمج في سوهاج, مشاريع هكر, Hacker School, Hemo Glow, RONY BOT, Amin Zero-Day, Vixo, Vixo app, magnifier app, screen magnifier, accessibility app, Python, Node.js, OSINT, Web Scraping, Android Modding, Ethical Hacking Projects, Cybersecurity Projects, penetration testing tools, hacking scripts, bug bounty projects, security tools, Sohag, Egypt, هكر سوهاج, عدسة مكبرة, تطبيق مكبر, Vixo تطبيق">
     <meta name="author" content="Amin Saad - AminVZD">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://amin772025.github.io/projects.html">
 
-    <meta property="og:title" content="أمين سعد | مشاريعي">
-    <meta property="og:description" content="استعراض مشاريعي في الأمن السيبراني والهكر الأخلاقي وتطوير التطبيقات">
+    <meta property="og:title" content="أمين سعد | مشاريعي - أول هكر أخلاقي في سوهاج">
+    <meta property="og:description" content="استعراض مشاريعي في الأمن السيبراني والهكر الأخلاقي وتطوير التطبيقات، بما في ذلك Vixo - تطبيق عدسة مكبرة للشاشة.">
     <meta property="og:url" content="https://amin772025.github.io/projects.html">
     <meta property="og:type" content="website">
 
@@ -32,7 +32,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&display=swap');
         * { font-family: 'Cairo', sans-serif; }
-        body { background: linear-gradient(135deg, #0a0f1a 0%, #0c1322 100%); }
+        body {
+            background: linear-gradient(135deg, #0a0f1a 0%, #0c1322 100%);
+            overflow-x: hidden;
+        }
+        /* خلفية الشبكة المتحركة - إحساس فيلمي */
         body::before {
             content: "";
             position: fixed;
@@ -40,14 +44,52 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+            background-image: 
+                linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
             background-size: 40px 40px;
             pointer-events: none;
             z-index: 0;
+            animation: gridPulse 8s ease-in-out infinite;
         }
-        .glow-text { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
-        .project-card { transition: all 0.3s ease; border: 1px solid rgba(16,185,129,0.15); }
-        .project-card:hover { transform: translateY(-5px); border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.3); }
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .glow-text {
+            text-shadow: 0 0 12px #10b981, 0 0 25px #059669;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 12px #10b981, 0 0 25px #059669; }
+            50% { text-shadow: 0 0 20px #10b981, 0 0 40px #059669, 0 0 60px #10b981; }
+        }
+        /* تأثيرات الدخول التدريجي - إحساس الفيلم */
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(16,185,129,0.15);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+        .project-card:nth-child(7) { animation-delay: 0.7s; }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: #10b981;
+            box-shadow: 0 0 30px rgba(16,185,129,0.3), 0 10px 40px -10px rgba(16,185,129,0.2);
+        }
         .telegram-float {
             position: fixed;
             bottom: 25px;
@@ -61,10 +103,38 @@
             justify-content: center;
             z-index: 1000;
             transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,136,204,0.4);
+            animation: floatBounce 3s ease-in-out infinite;
+        }
+        @keyframes floatBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
         .telegram-float:hover { transform: scale(1.1); }
-        .nav-links a { transition: all 0.3s ease; }
+        .nav-links a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #10b981;
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
         .nav-links a:hover { color: #10b981; }
+        /* تأثير توهج على العناصر المهمة */
+        .badge-glow {
+            background: rgba(16,185,129,0.15);
+            border: 1px solid rgba(16,185,129,0.3);
+            box-shadow: 0 0 20px rgba(16,185,129,0.1);
+        }
     </style>
 </head>
 <body class="text-gray-200 relative z-10">
@@ -88,19 +158,20 @@
     </div>
 
     <div class="container mx-auto px-6 py-16 text-center relative z-10">
-        <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center border-2 border-emerald-400/40 mx-auto mb-6">
+        <div class="w-28 h-28 bg-emerald-500/10 rounded-full flex items-center justify-center border-2 border-emerald-400/40 mx-auto mb-6 shadow-[0_0_25px_rgba(16,185,129,0.3)] badge-glow">
             <i class="fa-solid fa-diagram-project text-5xl text-emerald-400"></i>
         </div>
         <h1 class="text-5xl md:text-7xl font-black mb-3">
             <span class="text-white">مشاريعي</span>
             <span class="text-emerald-400 glow-text"> | My Projects</span>
         </h1>
-        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ نماذج حقيقية من أعمالي في الأمن السيبراني والتطوير ⚡</p>
+        <p class="text-emerald-400 text-xl md:text-2xl font-medium mb-2">⚡ أول هكر أخلاقي في سوهاج ⚡</p>
         <p class="text-gray-400 max-w-2xl mx-auto mt-4">أقدم مشاريعي التي تعكس مهاراتي وخبراتي في الهكر الأخلاقي وتطوير التطبيقات</p>
     </div>
 
     <div class="container mx-auto px-6 py-10 max-w-5xl">
         
+        <!-- مشروع 1 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-graduation-cap text-emerald-400 text-4xl"></i>
@@ -110,6 +181,7 @@
             <p class="text-emerald-400 text-sm">✔️ منصة تعليمية متكاملة ✔️ شروحات بالعربية والإنجليزية ✔️ أدوات اختبار اختراق مدمجة ✔️ تحديثات مستمرة</p>
         </div>
 
+        <!-- مشروع 2 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-heartbeat text-emerald-400 text-4xl"></i>
@@ -119,6 +191,7 @@
             <p class="text-emerald-400 text-sm">✔️ ذكاء اصطناعي من Google AI ✔️ مقترح مشروع احترافي ✔️ تصميم مبتكر ✔️ مشاركة في مسابقة رسمية</p>
         </div>
 
+        <!-- مشروع 3 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-robot text-emerald-400 text-4xl"></i>
@@ -128,6 +201,7 @@
             <p class="text-emerald-400 text-sm">✔️ يعمل على تليجرام وواتساب ✔️ تحميل من منصات متعددة ✔️ أتمتة كاملة ✔️ سيرفرات خاصة</p>
         </div>
 
+        <!-- مشروع 4 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-bug text-emerald-400 text-4xl"></i>
@@ -137,6 +211,7 @@
             <p class="text-emerald-400 text-sm">✔️ تعديل ملفات DEX و Smali ✔️ تغيير أسماء الحزم ✔️ حقن ميزات جديدة ✔️ أدوات MT Manager & NP Manager</p>
         </div>
 
+        <!-- مشروع 5 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-code text-emerald-400 text-4xl"></i>
@@ -146,6 +221,7 @@
             <p class="text-emerald-400 text-sm">✔️ OSINT لجمع البيانات ✔️ Web Scraping ✔️ بوتات تحميل وتدوير ✔️ يعمل على Termux</p>
         </div>
 
+        <!-- مشروع 6 -->
         <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <div class="flex items-center gap-4 mb-4">
                 <i class="fa-solid fa-globe text-emerald-400 text-4xl"></i>
@@ -155,13 +231,23 @@
             <p class="text-emerald-400 text-sm">✔️ ربط النطاق وإعدادات DNS ✔️ استضافة على GitHub Pages ✔️ تصميم احترافي ✔️ توافق مع جميع الأجهزة</p>
         </div>
 
+        <!-- مشروع 7 - Vixo (الجديد) -->
+        <div class="project-card bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <div class="flex items-center gap-4 mb-4">
+                <i class="fa-solid fa-eye text-emerald-400 text-4xl"></i>
+                <h2 class="text-2xl font-bold">🔍 Vixo - عدسة مكبرة للشاشة</h2>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-4">تطبيق Vixo هو أداة حديثة لتكبير الشاشة، مخصصة لإمكانية الوصول باستخدام تقنية تكبير النافذة من نظام أندرويد. يعرض عدسة مكبرة عائمة فوق أي تطبيق، ويمكن تفعيلها فوراً بالضغط على أزرار الصوت المادية. يمكن تخصيص قطر العدسة، قوة التكبير، وشكل العدسة (دائرة أو مستطيلة). متوفر بعدة لغات (العربية، الإنجليزية، الفرنسية). تم تطويره ونشره على APKPure كأول تطبيق من نوعه من مطور مصري في سوهاج.</p>
+            <p class="text-emerald-400 text-sm">✔️ عدسة مكبرة عائمة ✔️ تفعيل بأزرار الصوت ✔️ تخصيص القطر والشكل ✔️ متوفر بعدة لغات ✔️ متاح على APKPure</p>
+        </div>
+
         <div class="text-center mt-8">
             <a href="index.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 transition px-8 py-3 rounded-full font-bold shadow-lg">← العودة للرئيسية</a>
         </div>
     </div>
 
     <footer class="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
-        <p>جميع الحقوق محفوحة © 2026 | Amin Saad (AminVZD) | مشاريع الهكر الأخلاقي وتطوير التطبيقات</p>
+        <p>جميع الحقوق محفوظة © 2026 | Amin Saad (AminVZD) | أول هكر أخلاقي في سوهاج | مشاريع الهكر الأخلاقي وتطوير التطبيقات</p>
     </footer>
 
 </body>
