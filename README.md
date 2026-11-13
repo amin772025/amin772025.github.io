@@ -33,7 +33,7 @@
 - [ويكيبيديا](https://arz.wikipedia.org/wiki/%D8%A3%D9%85%D9%8A%D9%86_%D8%B3%D8%B9%D8%AF)
 - [ويكيداتا](https://www.wikidata.org/wiki/Q140301495)
 - [GitHub](https://github.com/amin772025)
-- [LinkedIn](https://www.linkedin.com/in/أمين-سعد-7577783a8)
+- [LinkedIn](https://www.linkedin.com/in/amin-saad-7577783a8)
 - [Telegram](https://t.me/A_VZD)
 
 ---
